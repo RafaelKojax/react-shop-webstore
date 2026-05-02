@@ -15,12 +15,10 @@ export interface Products {
     };
 }
 
-export interface CartItem extends Products {
-    quantity: number;
-}
-
-export interface CartState {
-    items: CartItem[];
+export interface ProductListProps {
+    isLoading: boolean;
+    isError: boolean;
+    data?: { data: any[] };
 }
 
 export interface ResponseProducts {
@@ -34,4 +32,26 @@ export interface ResponseProducts {
         };
     };
 }
+
+export interface CartItem extends Products {
+    quantity: number;
+}
+
+export interface CartState {
+    items: CartItem[];
+}
+
+export interface User {
+    id: number;
+    username: string;
+    email: string;
+}
+
+export interface AuthState {
+    user?: User;
+    token?: string;
+    isAuthenticated: boolean; 
+}
+
+
 
