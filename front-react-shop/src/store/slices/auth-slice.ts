@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { User, AuthState } from "../../types";
 
-const savedUser = localStorage.getIgem("user");
+const savedUser = localStorage.getItem("user");
 const savedToken = localStorage.getItem("token");
 
 const initialState: AuthState = {
